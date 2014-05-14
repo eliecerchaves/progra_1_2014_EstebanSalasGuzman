@@ -20,7 +20,7 @@ public class Practica1 {
     public static void main(String[] args) 
     {
         // TODO code application logic here
-        
+        /*
         int N;
         double A;
         char C;
@@ -71,8 +71,125 @@ public class Practica1 {
                 }
             }
         }while(opcion>0 && opcion<6);
+        */
+        int opcion;
+        int X,Y;
+        double N2,M;
+    
+        X=Integer.parseInt(JOptionPane.showInputDialog(null,"   Grupo A\n\n"
+            + "Ingrese un número: "));
+        Y=Integer.parseInt(JOptionPane.showInputDialog(null,"   Grupo A\n\n"
+            + "Ingrese otro número: "));
+        N2=Double.parseDouble(JOptionPane.showInputDialog(null,"   Grupo B\n\n"
+            + "Ingrese un número: "));
+        M=Double.parseDouble(JOptionPane.showInputDialog(null,"   Grupo B\n\n"
+            + "Ingrese otro número: "));
+        
+        int opcion2;
+        
+        do
+        {
+            opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"       MENU\n\n"
+                    + "1- Ver grupo A\n"
+                    + "2- Ver grupo B\n"
+                    + "3- Salir\n\n"
+                    + "Opcion: "));
+            switch(opcion)
+            {
+                case 1:
+                {
+                    do
+                    {
+                        opcion2=Integer.parseInt(JOptionPane.showInputDialog(null,"     MENU A\n\n"
+                            + "1- Ver suma\n"
+                            + "2- Ver resta\n"
+                            + "3- Ver multiplicación\n"
+                            + "4- Ver división\n"
+                            + "5- Cambiar números\n"
+                            + "6- Salir\n\n"
+                            + "Opcion: "));
+                        switch(opcion2)
+                        {
+                        case 1:
+                        {
+                            JOptionPane.showMessageDialog(null,"La suma de "+X+" y "+Y+" es: "+(X+Y));
+                            break;
+                        }
+                        case 2:
+                        {
+                            JOptionPane.showMessageDialog(null,"La resta de "+X+" y "+Y+" es: "+(X-Y));
+                            break;
+                        }
+                        case 3:
+                        {
+                            JOptionPane.showMessageDialog(null,"La multiplicación de "+X+" y "+Y+" es: "+(X*Y));
+                            break;
+                        }
+                        case 4:
+                        {
+                            JOptionPane.showMessageDialog(null,"La división de "+X+" y "+Y+" es: "+(X/Y));
+                            break;
+                        }
+                        case 5:
+                        {
+                            X=Integer.parseInt(JOptionPane.showInputDialog(null,"   Grupo A\n\n"
+                                    + "Ingrese un número: "));
+                            Y=Integer.parseInt(JOptionPane.showInputDialog(null,"   Grupo A\n\n"
+                                    + "Ingrese otro número: "));
+                            break;
+                        }
+                        }
+                    }while(opcion2>0 && opcion2<6);
+                    break;
+                }
+                case 2:
+                {
+                    do
+                    {
+                        opcion2=Integer.parseInt(JOptionPane.showInputDialog(null,"     MENU A\n\n"
+                            + "1- Ver suma\n"
+                            + "2- Ver resta\n"
+                            + "3- Ver multiplicación\n"
+                            + "4- Ver división\n"
+                            + "5- Cambiar números\n"
+                            + "6- Salir\n\n"
+                            + "Opcion: "));
+                        switch(opcion2)
+                        {
+                        case 1:
+                        {
+                            JOptionPane.showMessageDialog(null,"La suma de "+N2+" y "+M+" es: "+(N2+M));
+                            break;
+                        }
+                        case 2:
+                        {
+                            JOptionPane.showMessageDialog(null,"La resta de "+N2+" y "+M+" es: "+(N2-M));
+                            break;
+                        }
+                        case 3:
+                        {
+                            JOptionPane.showMessageDialog(null,"La multiplicación de "+N2+" y "+M+" es: "+(N2*M));
+                            break;
+                        }
+                        case 4:
+                        {
+                            JOptionPane.showMessageDialog(null,"La división de "+N2+" y "+M+" es: "+(N2/M));
+                            break;
+                        }
+                        case 5:
+                        {
+                            X=Integer.parseInt(JOptionPane.showInputDialog(null,"   Grupo A\n\n"
+                                    + "Ingrese un número: "));
+                            Y=Integer.parseInt(JOptionPane.showInputDialog(null,"   Grupo A\n\n"
+                                    + "Ingrese otro número: "));
+                            break;
+                        }
+                        }
+                    }while(opcion2>0 && opcion2<6);
+                    break;
+                }
+            }
+        }while(opcion>0 && opcion<3);
+        
     }
-    
-    
-    
 }
