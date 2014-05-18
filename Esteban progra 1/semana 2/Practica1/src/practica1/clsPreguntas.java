@@ -45,31 +45,36 @@ public class clsPreguntas
             }
             case 3:
             {
-                
+                clsPregunta3 A = new clsPregunta3();
+                A.Menu();
                 Menu();
                 break;
             }
             case 4:
             {
-                
+                clsPregunta4 A = new clsPregunta4();
+                A.Menu();
                 Menu();
                 break;
             }
             case 5:
             {
-                
+                clsPregunta5 A = new clsPregunta5();
+                A.Menu();
                 Menu();
                 break;
             }
             case 6:
             {
-                
+                clsPregunta6 A = new clsPregunta6();
+                A.Menu();
                 Menu();
                 break;
             }
             case 7:
             {
-                
+                clsPregunta7 A = new clsPregunta7();
+                A.Menu();
                 Menu();
                 break;
             }

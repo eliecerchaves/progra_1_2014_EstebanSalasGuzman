@@ -15,27 +15,40 @@ import javax.swing.JOptionPane;
 public class clsPregunta3 
 {
     private int N;
+    private int N2;
     
     public clsPregunta3()
     {
         JOptionPane.showMessageDialog(null,"Se le solicitará un número\n\n"
                 + "Luego se le desplegará un menu");
         this.N=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese un número: "));
+        this.N2=this.N;
     }
     
-    private int Aumentar(int i)
+    private void Proced(int i)
     {
-        if (i==0) 
+        switch(i)
         {
-            return 0;
-        } else 
-        {
-            int aum=
+            case 2:
+            {
+                this.N2=this.N2+77;
+                break;
+            }
+            case 3:
+            {
+                this.N2=this.N2-3;
+                break;
+            }
+            case 4:
+            {
+                this.N2=this.N2*2;
+            }
         }
     }
     
     public void Menu()
     {
+        
         int opcion;
         opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"      MENU\n\n"
                 + "1- Ver número\n"
@@ -49,31 +62,33 @@ public class clsPregunta3
         {
             case 1:
             {
-                JOptionPane.showMessageDialog(null,"E");
+                JOptionPane.showMessageDialog(null,"El número inicial es: "+this.N+"\n"
+                        + "El número actual es: "+this.N2);
+                Menu(); break;
             }
             case 2:
             {
-                N=N+77;
-                Menu();
-                break;
+                Proced(2);
+                JOptionPane.showMessageDialog(null,"Aumento realizado");
+                Menu(); break;
             }
             case 3:
             {
-                N=N-3;
-                Menu();
-                break;
+                Proced(3);
+                JOptionPane.showMessageDialog(null,"Disminución realizada");
+                Menu(); break;
             }
             case 4:
             {
-                N=N*2;
-                Menu();
-                break;
+                Proced(4);
+                JOptionPane.showMessageDialog(null,"Duplicación realizada");
+                Menu(); break;
             }
             case 5:
             {
-                N=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese un número: "));
-                Menu();
-                break;
+                this.N=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese un número: "));
+                this.N2=this.N;
+                Menu(); break;
             }
         }
     }
