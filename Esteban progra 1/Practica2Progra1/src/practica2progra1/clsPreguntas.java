@@ -51,14 +51,13 @@ public class clsPreguntas
                 Menu();
                 break;
             }*/ 
-            /*
             case 4:
             {
                 clsPregunta4 A = new clsPregunta4();
                 A.Menu();
                 Menu();
                 break;
-            }
+            }/*
             case 5:
             {
                 clsPregunta5 A = new clsPregunta5();
