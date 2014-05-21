@@ -24,14 +24,6 @@ public class Practica1 {
         clsPreguntas A = new clsPreguntas();
         A.Menu();
         
-        //Pregunta 3
-        /*
-        
-        
-        
-        //Pregunta 4
-        
-        */
     }
     
 }
