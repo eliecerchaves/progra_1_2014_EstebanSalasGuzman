@@ -19,20 +19,20 @@ public class clsPregunta14
         JOptionPane.showMessageDialog(null,"Se invierte $1000 con 2% interés mensual");
     }
     
-    private String Inversion(int i, float inv)
+    private float Inversion(float inv)
     {
-        if (i>11)
+        if (inv>1500)
         {
-            return "Final   $"+inv;
+            return 0;
         } else
         {
-            String Camb = i+"        $"+inv+"       2%       $"+(float)((inv*0.02)+inv)+"\n"+Inversion(i+1,(float)(inv*0.02)+inv);
-            return Camb;
+            float meses = 1+Inversion((float)(inv*0.02)+inv);
+            return meses;
         }
     }
     
     public void Menu()
     {
-        JOptionPane.showMessageDialog(null,"Mes  Inicial      Interés    Final\n"+Inversion(0,1000));
+        JOptionPane.showMessageDialog(null,"Después de "+Inversion(1000)+" meses se obtiene más de $1500");
     }
 }

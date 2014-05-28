@@ -18,7 +18,7 @@ public class AppPractica3 {
     public static void main(String[] args) 
     {
         // TODO code application logic here
-        clsPregunta2 A = new clsPregunta2();
+        clsPreguntas A = new clsPreguntas();
         A.Menu();
     }
     
