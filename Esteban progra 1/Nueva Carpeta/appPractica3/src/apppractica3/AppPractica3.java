@@ -17,9 +17,12 @@ public class AppPractica3 {
      */
     public static void main(String[] args) 
     {
-        // TODO code application logic here
-        clsPreguntas A = new clsPreguntas();
-        A.Menu();
+        // TODAS LAS PREGUNTAS DE LA PRACTICA SE MANEJAN EN UNA CLASE
+        clsPreguntas A = new clsPreguntas();// < = = = = = = = = = ^
+        A.Menu();// < = = = = = = = = = = = = = = = = = = = = = = ¬
+        // ESTO ES DEBIDO A QUE, COMO EN ESA CLASE SE MANEJA UN MENU
+        // Y REQUIERO QUE SE ESTÉ MOSTRANDO CONSTANTEMENTE
+        // NO PUEDO LLAMAR AL "main" A SÍ MISMO.
     }
     
 }

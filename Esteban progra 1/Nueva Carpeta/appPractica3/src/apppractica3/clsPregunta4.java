@@ -31,57 +31,33 @@ public class clsPregunta4
         }while(this.mes<1 || this.mes>12);
     }
     
-    private boolean Bisiesto(int i)
+    private boolean Bisiesto() //DETERMINA SI UN AÑO ES BISIESTO O NO
     {
-        if (this.año<2012) 
+        if ((this.año%4)==0) 
         {
-            if (this.año==i) 
-            {
-                return true;
-            } else 
-            {
-                if (i<this.año) 
-                {
-                    return false;
-                } else 
-                {
-                    Bisiesto(i-4);
-                }
-            }
-        } 
-        if (this.año>=2012)
-        {
-            if (this.año==i) 
-            {
-                return true;
-            } else 
-            {
-                if (i>this.año) 
-                {
-                    return false;
-                } else 
-                {
-                    Bisiesto(i+4);
-                }
-            }
-        }
-        return true;
-    }
-    private int Mes()
-    {
-        if (this.mes==2 && Bisiesto(2012)==true)
-        {
-            return 29;
+            return true;
         } else 
         {
-            switch(this.mes)
+            return false;
+        }
+    }
+    
+    private int DiasDelMes(int mes) //DEVUELVE LA CANT DE DIAS DE UN MES
+                                            // CON BASE EN LA FUNCION "Bisiesto"
+    {
+        if (mes==2 && Bisiesto()==true) //SI EL MES INGRESADO ES 2 (FEBRERO)
+        {                                       //Y SI EL AÑO INGRESADO ES BISIESTO (LLAMA A DICHA FUNCION)
+            return 29;
+        } else //SINO ES NI FEBRERO O EL AÑO NO ES BISIESTO
+        {
+            switch(mes) //DEVUELVE LOS DIAS DE CADA MES
             {
                 case 2: return 28;
                 case 1: case 3: case 5: case 7: case 8: case 10: case 12: return 31;
                 case 4: case 6: case 9: case 11: return 30;
             }
         }
-        return 0;
+        return 0; //ESTE RETURN NUNCA SE VA A OCUPAR, PERO EL PROGRAMA LO PEDÍA
     }
     
     public void Menu()
@@ -99,7 +75,7 @@ public class clsPregunta4
         {
             case 1:
             {
-                JOptionPane.showMessageDialog(null, "Año: "+this.año+"\nMes: "+this.mes+" ==> "+Mes()+" días");
+                JOptionPane.showMessageDialog(null, "Año: "+this.año+"\nMes: "+this.mes+" ==> "+DiasDelMes(mes)+" días");
                 Menu(); break;
             }
             case 2:

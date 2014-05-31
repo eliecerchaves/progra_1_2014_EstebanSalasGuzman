@@ -24,7 +24,7 @@ public class clsPreguntas
     public void Menu()
     {
         this.pregunta=Integer.parseInt(JOptionPane.showInputDialog(null, "Seleccione un ejercicio: \n\n"
-                + "1 - 2 - 3 - 4 - 5 - 6 - 7\n"
+                + "1 - 2 - 3 - 4 - 5 - 6 - 7 - 8\n"
                 + "Otro # - Salir\n\n"
                 + "OpciÃ³n: "));
         switch(this.pregunta)
@@ -75,6 +75,12 @@ public class clsPreguntas
             {
                 clsPregunta7 A = new clsPregunta7();
                 A.Menu();
+                Menu();
+                break;
+            }
+            case 8:
+            {
+                clsPregunta8 A = new clsPregunta8();
                 Menu();
                 break;
             }
